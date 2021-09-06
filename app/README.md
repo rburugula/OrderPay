@@ -9,3 +9,9 @@ Picasso - for retreiving the images
 
 Will be implementing using MVVM architecture, Coroutines, Livedata, viewBinding
 
+This projet is to mainly demonstrate the architecture and the use of latest techstack and only
+has very basic UI
+Couple of things which I will be doing if I spend more time
+Make the UI look pretier, at the moment it is very very basic
+Need to add more unit tests on the Live data and modify the coroutinescope in unit tests
+
