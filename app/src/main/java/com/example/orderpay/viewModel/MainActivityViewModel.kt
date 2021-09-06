@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.orderpay.data.DataRepository
 import com.example.orderpay.model.Character
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -17,8 +18,8 @@ class MainActivityViewModel @Inject constructor(
     val charactersLiveData: LiveData<Result<ArrayList<Character>>> = _charactersLiveData
 
     fun fetchCharacters() {
-        viewModelScope.launch {
-           _charactersLiveData.value = dataRepository.fetchCharacters()
+        viewModelScope.launch(Dispatchers.IO) {
+            _charactersLiveData.postValue(dataRepository.fetchCharacters())
         }
     }
 }

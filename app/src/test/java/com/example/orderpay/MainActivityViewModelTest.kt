@@ -3,6 +3,7 @@ package com.example.orderpay
 import com.example.orderpay.data.DataRepository
 import com.example.orderpay.viewModel.MainActivityViewModel
 import com.nhaarman.mockitokotlin2.verify
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runBlockingTest
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -18,6 +19,7 @@ class MainActivityViewModelTest {
     @InjectMocks
     private lateinit var mainActivityViewModel: MainActivityViewModel
 
+    @ExperimentalCoroutinesApi
     @Test
     fun fetchCharacters() {
         runBlockingTest {
