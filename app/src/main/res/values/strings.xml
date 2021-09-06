@@ -5,4 +5,9 @@
     <string name="characters_fragment">Characters fragment</string>
     <string name="character_detail_fragment">Character detail fragment</string>
     <string name="error_connecting_to_server">Error connecting to server</string>
+    <string name="name">Name</string>
+    <string name="occupation">Occupation</string>
+    <string name="status">Status</string>
+    <string name="nickname">Nickname</string>
+    <string name="season_appearance">Season appearance</string>
 </resources>

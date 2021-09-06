@@ -9,6 +9,6 @@ data class Character(
     val img: String,
     val occupation: ArrayList<String>,
     val status: String,
-    val nickName: String,
+    val nickname: String,
     val appearance: ArrayList<Int>
 ) : Parcelable
