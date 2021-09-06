@@ -4,3 +4,8 @@ Libraries I will be using in this project are
 
 Retrofit - For api calls
 Dagger - Dependency injection
+Jetpack navigation UI - For navigating between fragments
+Picasso - for retreiving the images
+
+Will be implementing using MVVM architecture, Coroutines, Livedata, viewBinding
+
