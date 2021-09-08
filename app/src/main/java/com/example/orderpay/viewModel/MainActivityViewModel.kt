@@ -14,7 +14,7 @@ class MainActivityViewModel @Inject constructor(
     private val dataRepository: DataRepository
 ): ViewModel() {
 
-    val _charactersLiveData = MutableLiveData<Result<ArrayList<Character>>>()
+    private val _charactersLiveData = MutableLiveData<Result<ArrayList<Character>>>()
     val charactersLiveData: LiveData<Result<ArrayList<Character>>> = _charactersLiveData
 
     fun fetchCharacters() {

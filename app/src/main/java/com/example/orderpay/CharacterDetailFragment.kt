@@ -10,7 +10,7 @@ import com.example.orderpay.databinding.FragmentCharacterDetailBinding
 
 class CharacterDetailFragment : Fragment() {
 
-    val args: CharacterDetailFragmentArgs by navArgs()
+    private val args: CharacterDetailFragmentArgs by navArgs()
 
     private var _binding: FragmentCharacterDetailBinding? = null
     private val binding get() = _binding!!

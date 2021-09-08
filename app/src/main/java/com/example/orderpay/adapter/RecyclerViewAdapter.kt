@@ -15,7 +15,7 @@ class RecyclerViewAdapter: RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder
 
     var items = ArrayList<Character>()
     var onItemClick: ((Character) -> Unit)?  = null
-    var itemPosition = 0
+    private var itemPosition = 0
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.characters_row, parent, false)
@@ -25,7 +25,7 @@ class RecyclerViewAdapter: RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         itemPosition = position
-        holder.bind(items.get(position))
+        holder.bind(items[position])
     }
 
     override fun getItemCount(): Int {
@@ -38,8 +38,8 @@ class RecyclerViewAdapter: RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder
     }
 
     inner class MyViewHolder(view: View): RecyclerView.ViewHolder(view) {
-        val tvName = view.findViewById<TextView>(R.id.tvName)
-        val imageThumb = view.findViewById<ImageView>(R.id.imageThumb)
+        private val tvName: TextView = view.findViewById(R.id.tvName)
+        private val imageThumb: ImageView = view.findViewById(R.id.imageThumb)
 
         init {
             view.setOnClickListener {
